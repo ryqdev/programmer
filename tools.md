@@ -103,6 +103,7 @@ Arch Linux：灵活性强，但硬件驱动需手动配置。如果有时间, �
 Caps Lock键换成Ctrl比较好, 因为Unix上很多操作需要经常按Ctrl, 比如Ctrl-C, Ctrl-D
 <img width="715" alt="image" src="https://github.com/user-attachments/assets/fbe39666-c410-42d4-9d46-6e4f64fb53f4">
 
+https://github.com/user-attachments/assets/d571fd68-3350-47c5-a039-9457c8fe30eb
 
 ##### 4.1.2.2 系统操作调优
 
@@ -190,7 +191,7 @@ sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_l
 <img width="825" alt="image" src="https://github.com/user-attachments/assets/83b41bb4-171c-48c0-8342-4f35344e7e7f">
 
 
-https://github.com/user-attachments/assets/d571fd68-3350-47c5-a039-9457c8fe30eb
+
 
 
 
