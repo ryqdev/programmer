@@ -178,17 +178,7 @@ sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_l
 <img width="825" alt="image" src="https://github.com/user-attachments/assets/83b41bb4-171c-48c0-8342-4f35344e7e7f">
 
 
-
-
-
-
-https://github.com/user-attachments/assets/f25e129b-3111-4190-ade1-5901bad28ca6
-
-
-
-
-
-
+https://github.com/user-attachments/assets/d571fd68-3350-47c5-a039-9457c8fe30eb
 
 
 
