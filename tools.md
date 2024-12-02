@@ -164,6 +164,18 @@ https://www.cnblogs.com/batcom/archive/2013/04/25/3042426.html
 这里就不论战了, 介绍一个兼收并蓄的方法来使用emacs
 
 
+
+https://github.com/user-attachments/assets/e3ecbfa8-586b-4777-8263-ddc2d1dee63b
+
+
+https://github.com/user-attachments/assets/341088fb-9bfb-4e91-bd54-bae4c12b6261
+
+
+
+https://github.com/user-attachments/assets/a793404c-79b4-446e-9999-4c8fb83e21f4
+
+
+
 但是这个快捷键在Windows和Linux上会有快捷键冲突,  所以也callback了为什么推荐Mac系统
 
 
