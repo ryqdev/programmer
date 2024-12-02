@@ -101,6 +101,8 @@ Arch Linux：灵活性强，但硬件驱动需手动配置。如果有时间, �
 ##### 4.1.2.1 键位映射修改
 
 Caps Lock键换成Ctrl比较好, 因为Unix上很多操作需要经常按Ctrl, 比如Ctrl-C, Ctrl-D
+<img width="715" alt="image" src="https://github.com/user-attachments/assets/fbe39666-c410-42d4-9d46-6e4f64fb53f4">
+
 
 ##### 4.1.2.2 系统操作调优
 
@@ -110,7 +112,7 @@ MacOS的屏幕面积寸土寸金, 而且平时几乎很少会用dock, 不如直�
 defaults write com.apple.dock autohide-delay -float 1000; killall Dock
 ```
 
-如果想要暂时显示dock: 可以通过C-up来显示桌面, 从而显示Dock栏
+如果想要暂时显示dock: 可以通过Ctrl-up来显示桌面, 从而显示Dock栏
 
 如果想要恢复dock:
 
@@ -154,7 +156,6 @@ defaults write -g ApplePressAndHoldEnabled -bool true
 **<u>运行完命中之后, 需要log out之后才能生效</u>**
 
 
-
 #####  4.1.2.3 巧用系统级别emacs快捷键
 
 Emacs是神的编辑器，而Vim是编辑器之神。
@@ -163,9 +164,7 @@ https://www.cnblogs.com/batcom/archive/2013/04/25/3042426.html
 这里就不论战了, 介绍一个兼收并蓄的方法来使用emacs
 
 
-
 但是这个快捷键在Windows和Linux上会有快捷键冲突,  所以也callback了为什么推荐Mac系统
-
 
 
 ##### 4.1.2.4 在终端需要输入sudo的时候, 使用指纹验证
@@ -176,7 +175,21 @@ Enable fingerprint authentication for `sudo`:
 sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
 ```
 
-Refer to this [Apple StackExchange answer](https://apple.stackexchange.com/questions/259093/can-touch-id-on-mac-authenticate-sudo-in-terminal) for more details.
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/83b41bb4-171c-48c0-8342-4f35344e7e7f">
+
+
+
+
+
+
+https://github.com/user-attachments/assets/f25e129b-3111-4190-ade1-5901bad28ca6
+
+
+
+
+
+
+
 
 
 #### 4.1.3 包管理器
@@ -191,7 +204,7 @@ https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-比较geek的做法是直接使用brew来安装所有程序, 而不是手动地一个个地点击
+比较geek的做法是直接使用brew来安装所有程序, 而不是手动地一个个地点击下载安装
 e.g.
 
 ```shell
@@ -203,43 +216,13 @@ brew install visual-studio-code
 ##### 4.1.4.1 fish
 
 推荐使用fish
-https://mmazzarolo.com/blog/2023-11-16-my-fish-shell-setup-on-macos/
-
-更换主题:
-使用lambda 的主题
-
-https://wompa.land/articles/iterm-status-bar
-
-##### 4.1.4.2 fzf
-
-`fzf` is a general-purpose command-line fuzzy finder:
-
-```shell
-brew install fzf
-```
-
-##### 4.1.4.3 gsed (GNU `sed ` alternative)
-
-Install GNU `sed` for better `sed` compatibility:
-
-```shell
-brew install coreutils
-```
-
-Example usage:
-
-```shell
-echo "a b\nc d" | gsed 's/a/aa/g'
-# Output:
-# aa b
-# c d
-```
+参考教程: https://mmazzarolo.com/blog/2023-11-16-my-fish-shell-setup-on-macos/
 
 ##### 4.1.4.5 autojump
 
-`autojump` helps you navigate your filesystem quickly:
+`autojump` 可以快速跳转到目标路径, 还有一些其他的操作比如打开目标文件夹
 
-**Install autojump:**
+安装autojump
 
 ```shell
 brew install autojump
@@ -251,7 +234,7 @@ brew install autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 ```
 
-**Common Commands:**
+常用命令:
 
 - Go to directory: `j [directory_name]`
 - Open directory: `jo [directory_name]`
@@ -266,113 +249,79 @@ MacOS上比较有名的平铺式窗口管理器yabai: https://github.com/koekeis
 #### 4.1.5 编辑器
 程序员写代码最重要的一项武器: 编辑器
 
-Neovim, Lua语言可以实现高度定制化, 类似Linux, 适合喜欢折腾, 并且对编辑器性能有需求的人
-Vscode, 开箱即用, 生态丰富, 类似操作系统中的MacOS
-
 ##### 4.1.5.1 Vim
-
-vim是一个强大的编辑器
-现在会打字了, 那么也就会使用vim了
+Vim是一个强大的编辑器, 只要会打字, 就会使用Vim
 
 如果你想要在未来几年从事编程工作, 那么花费几个月的时间学习和熟悉Vim是十分有价值的一笔时间投资
-https://vim-adventures.com/
 
-https://vim.rtorr.com/
+这里推荐一下我当年入门Vim的游戏: https://vim-adventures.com/
 
-Advanced Operations of Vim
-这里来一点演示吧
+TODO来点演示
 
 ##### 4.1.5.2 Neovim
 
-https://www.lunarvim.org/
-https://www.lazyvim.org/
+Neovim 是Vim 的一个分支，旨在改进和扩展原始的Vim 编辑器
+
+有很多开源项目使用Neovim搭建终端IDE:
+- https://www.lunarvim.org/
+- https://www.lazyvim.org/
 
 ##### 4.1.5.3 VSCode
+https://code.visualstudio.com/
+程序员应该都听说过
 
 ##### 4.1.5.4 Jetbrains
+https://www.jetbrains.com/
+程序员应该都用过
 
+##### 4.1.5.5 开发工具pattern
 
-##### 4.1.5.5 开发pattern
+vim, vscode, jetbrains 看似是三个东西, 实际上可以是同一个
 
-vim, vscode, jetbrains 看似是三个东西, 实际上是一个
-
-Vim
-VScode的键位
-Jetbrains的代码分析
-Codeium的AI能力
-Emacs的系统级别快捷键
-
-开发环境最好和线上生产环境类似
-
-笔记本MacOS
-Vscode连远程开发机
-
+可以在Jetbrains的IDE中安装Vim插件, 同时改用VSCode的快捷键mapping, 配合Emacs系统级别的快捷键, 就得到了一个缝合怪
 
 ##### 4.1.5.6 AI IDE
 
 作为程序员, 可以觉得目前的AI工具比较弱智而不用它, 但是不能不学习它
 
-cursor
-windsurf
+目前比较有名的AI IDE有
+- [cursor](https://www.cursor.com/)
+- [windsurf](https://codeium.com/windsurf)
+
+但是目前使用下来总会感觉不够完美, 希望在不久的将来能够用上真正的AI IDE
 
 #### 4.1.6 Mac软件推荐
-
-经典之所以成为经典, 不在于有很多fancy的功能, 而在于它稳定可靠, 可以帮助解决问题
-
-iTerm2
-
-Omnifocus: 类似的还有Things
-
-HyperSwitch
-
-Magnet
-
-Snipaste
-
-Raycast
-
-Dropbox: 但是最近有很多Monetization的措施, 用户体验没有之前那么好了, 效果是公司终于盈利了
-
-keycastr
 ```shell
 brew install keycastr
+brew install iterm2
+brew install typora
+brew install dropbox
+brew install hyperswitch
+brew install bob
+brew install keepassxc
+brew install iina
+brew install spotify
+brew install snipaste
+brew install raycast
+brew install omnifocus
 ```
 
 #### 4.1.7 浏览器
 
-市面上比较主流的浏览器有: Chrome, Safari, Firefox, Microsoft Edge, Opera, 以及Brave Browser。
+还是推荐浏览器的老大哥: Chrome
 
-如果在公司, 还是老老实实用Chrome吧
-
-Arc 浏览器是浏览器中的新锐, 用户体验也是不错
-
-但是Arc浏览器的跨设备同步功能有点问题, 而且比较卡,
-另外最近还爆出一个安全问题, 所以我暂时还不会去使用Arc浏览器
+Arc 浏览器是浏览器中的新锐, 用户体验也是不错, 但是Arc浏览器的跨设备同步功能有点问题, 而且日常使用比较卡, 另外最近还爆出一个安全问题
 
 https://arc.net/blog/CVE-2024-45489-incident-response
 
+##### 4.1.7.1 Chrome插件推荐
 
+[Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
-最终还是选择Chrome, 出于插件生态和稳定性的考虑
+[Proxy SwitchyOmega](https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
 
-Chrome插件推荐
+[ModHeader - Modify HTTP headers](https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj)
 
-Tampermonkey
-https://ryqdev.github.io/dev-insights/cs/dev-tools/developing/effective-macos.html?highlight=extension#tampermonkey
-
-- Enhanced Word Highlight: Customize and enhance word highlighting in your browser.
-
-Proxy SwitchyOmega
-
-https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN&pli=1
-
-ModHeader - Modify HTTP headers
-
-https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj
-
-Highlight This: finds and marks words
-
-https://chromewebstore.google.com/detail/highlight-this-finds-and/fgmbnmjmbjenlhbefngfibmjkpbcljaj
 
 #### 4.1.8 版本管理工具 Git
 
@@ -386,7 +335,7 @@ https://education.github.com/git-cheat-sheet-education.pdf
 
 ### 4.2. Linux
 
-下大部分的软件和MacOS都差不多, 下面只列举一些Linux上比较独特的
+大部分的软件和MacOS都差不多, 下面只列举一些Linux上比较独特的
 
 #### 4.2.1 Tmux
 
@@ -396,29 +345,20 @@ https://www.redhat.com/en/blog/introduction-tmux-linux
 
 #### 4.2.2 i3
 
-如果用了Linux但是没有i3, 那么就错失了一次XXX
+如果用了Linux但是没有[i3](https://i3wm.org), 那么可能错失了Linux一小半的快乐
 
 相比于stack-based window management, 这种tilling window management熟练之后操作会更加高效
 
-https://i3wm.org/
+这个视频中比较简略地介绍了一下i3: https://www.bilibili.com/video/BV1kg411i7n3/?vd_source=d2c806a9bab81eb0397edea7c98c6980
 
-TODO: 是否把我的视频放上来
+
+#### Linux软件推荐
 
 https://github.com/hluk/CopyQ?tab=readme-ov-file
-
-
-
-https://www.bilibili.com/video/BV1kg411i7n3/?spm_id_from=333.999.0.0&vd_source=d2c806a9bab81eb0397edea7c98c6980
-
 
 ### 4.3. Windows
 
 Windows编程强推WSL2.0, 
-
-但是WSL-2.0基于hyper-v, 会与很多虚拟机软件冲突
-
-https://jia.je/os/2023/10/03/wsl2-internals/#init
-
 
 ## 4.4 云开发
 
