@@ -61,11 +61,10 @@
 适合需要高度自定义与开源工具链的用户：
 
 ##### 3.2.1 Linux On Mac
-如果是Macbook, 可以体验一下[Asahi Linux](https://asahilinux.or).
+如果是Macbook, 可以体验一下[Asahi Linux](https://asahilinux.org).
 
-另外我还踩过一个坑: MacOS 14.1无法正常安装Asahi Linux, 这也引申出了Linux的另一个问题: 兼容性
-
-但是会有很多兼容性问题: TODO
+不过需要注意Asahi Linux会有很多限制, 包括机型和MacOS版本等, 安装之前需要慎重和做好备份
+<img width="1081" alt="image" src="https://github.com/user-attachments/assets/2031eddc-5ae7-407a-ab9f-fe3726ab02fd">
 
 ##### 3.2.2 Linux Virtual Machine
 在MacOS和Windows中安装Linux虚拟机是一个不错的方案, 既可以使用Linux里面的软件包, 又可以兼顾原有操作系统的稳定性和生态, 而且一般虚拟机软件(例如parallel desktop) 是会保持快照功能的, 假如虚拟机的重要文件被破坏了, 也可以轻易地恢复
@@ -78,7 +77,7 @@
 
 推荐使用系统安装工具 [Ventoy](https://github.com/ventoy/Ventoy)
 
-但是这里可能会踩坑: 主板和芯片的版本问题
+但是这里可能会踩坑: 主板和芯片的版本太新导致Ventoy无法生效
 
 ##### 3.2.3.2 Linux发行版
 
@@ -239,8 +238,8 @@ brew install autojump
 
 常用命令:
 
-- Go to directory: `j [directory_name]`
-- Open directory: `jo [directory_name]`
+- Go to directory: `j <directory_name>`
+- Open directory: `jo <directory_name>`
 - Show database entries: `j -s`
 
 
@@ -354,7 +353,6 @@ https://www.redhat.com/en/blog/introduction-tmux-linux
 
 这个视频中比较简略地介绍了一下i3: https://www.bilibili.com/video/BV1kg411i7n3/?vd_source=d2c806a9bab81eb0397edea7c98c6980
 
-
 #### Linux软件推荐
 
 https://github.com/hluk/CopyQ?tab=readme-ov-file
@@ -376,7 +374,7 @@ https://godbolt.org/
 https://vscode.dev/
 
 ### 4.4.4 colab
-
+https://colab.research.google.com/
 
 ### 其他
 
